@@ -23,7 +23,7 @@ To solve : Netflix created and open-sourced its `Zull Proxy server` and Spring h
 
 ![Zull-diagram-2](img/zull-proxy-2.jpg)
 
-## Build dan Run ##
+## Build and Run ##
 
 ### Spring Boot Initializr ###
 
@@ -127,6 +127,8 @@ To solve : Netflix created and open-sourced its `Zull Proxy server` and Spring h
           serviceUrl:
             defaultZone: https://localhost:8761/eureka/,https://localhost:8762/eureka/
     ```
+
+### Build with IDE ###
 
 3. Add `@EnableZuulProxy` into your spring project configuration
 
