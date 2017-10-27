@@ -103,15 +103,17 @@ To solve : Netflix created and open-sourced its `Zull Proxy server` and Spring h
             service-id: configservice
           fail-fast: true
 
-    zuul:
-      routes:
-        images:
-          path: /img/**
-        catalog: /catalog/**
-        pengiriman:
-          serviceId: shipping
-          path: /shipping/**
-        store: /**
+    #cara 1 dengan menggunakan path
+        catalog:
+          path: /ctx/**
+
+    #cara 2 dengan init key catalog langsung
+    #    catalog: /catalog/**
+
+    #cara 3 dengan menggunakan inisial serviceId
+    #     katalog:
+    #      serviceId: catalog
+    #      path: /catalog/**
 
     ---
     spring:
