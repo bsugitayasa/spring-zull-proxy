@@ -51,7 +51,7 @@ To solve : Netflix created and open-sourced its `Zull Proxy server` and Spring h
    
 3. Generate Project
 
-4. Download dan import to each IDE
+4. Download & import to each IDE
     
 
 ### Build with Maven ###
