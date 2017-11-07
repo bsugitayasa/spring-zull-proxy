@@ -33,19 +33,19 @@ To solve : Netflix created and open-sourced its `Zull Proxy server` and Spring h
 
     Group
     
-    ```
+    ```java
     com.sheringsession.balicamp.springzull    
     ```
 
     Artifact
     
-    ```
+    ```java
     zull-proxy
     ```
    
     Dependencies
     
-    ```
+    ```java
     Eureka Discovery, Eureka Server, Zull
     ```
    
@@ -58,7 +58,7 @@ To solve : Netflix created and open-sourced its `Zull Proxy server` and Spring h
 
 1. In `pom.xml` makesure for dependency
     
-    ```
+    ```java
     <dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -89,7 +89,7 @@ To solve : Netflix created and open-sourced its `Zull Proxy server` and Spring h
 
 2. `applicatioin.properties` rename into `bootstrap.yml`
 
-    ```
+    ```java
     spring:
       application:
         name: proxy
@@ -103,14 +103,14 @@ To solve : Netflix created and open-sourced its `Zull Proxy server` and Spring h
             service-id: configservice
           fail-fast: true
 
-    #cara 1 dengan menggunakan path
+    #case 1 with path
         catalog:
           path: /ctx/**
 
-    #cara 2 dengan init key catalog langsung
+    #case 2 with init key catalog directly
     #    catalog: /catalog/**
 
-    #cara 3 dengan menggunakan inisial serviceId
+    #case 3 with initial serviceId
     #     katalog:
     #      serviceId: catalog
     #      path: /catalog/**
@@ -132,7 +132,7 @@ To solve : Netflix created and open-sourced its `Zull Proxy server` and Spring h
 
 3. Add `@EnableZuulProxy` into your spring project configuration
 
-    ```
+    ```java
     @SpringBootApplication
     @EnableZuulProxy
     public class ProxyApplication {
@@ -143,4 +143,4 @@ To solve : Netflix created and open-sourced its `Zull Proxy server` and Spring h
     }
     ```
 
-### Try in browser... ###
+#### Have a nice codding ####
