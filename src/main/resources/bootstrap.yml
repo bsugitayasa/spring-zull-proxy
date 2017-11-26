@@ -1,0 +1,42 @@
+server:
+  port: 8799
+spring:
+  application:
+    name: zull-proxy
+  zipkin:
+    base-url: http://localhost:8898
+  sleuth:
+    sampler:
+      percentage: 1.0
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: configservice
+      fail-fast: true
+      
+zuul:
+  routes:
+#cara 1 dengan menggunakan path
+    catalog:
+      path: /ctx/**
+    payment:
+      path: /py/**
+
+#cara 2 dengan init key catalog langsung
+#    catalog: /catalog/**
+
+#cara 3 dengan menggunakan inisial serviceId
+#     katalog:
+#      serviceId: catalog
+#      path: /catalog/**
+
+---
+spring:
+  profiles: native
+eureka:
+  instance:
+    hostname: localhost:8799
+  client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
